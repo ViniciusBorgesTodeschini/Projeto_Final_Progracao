@@ -98,12 +98,6 @@ object DataModule1: TDataModule1
       FieldName = 'ID_PILOTO'
       Origin = 'ID_PILOTO'
     end
-    object FDTable_TreinosDATA_CADASTRO: TDateField
-      DisplayLabel = 'Data de Cadastro'
-      FieldName = 'DATA_CADASTRO'
-      Origin = 'DATA_CADASTRO'
-      EditMask = '!99/99/00;1;_'
-    end
     object FDTable_TreinosNUMERO_CARRO: TIntegerField
       DisplayLabel = 'N'#250'mero do Carro'
       FieldName = 'NUMERO_CARRO'
@@ -129,6 +123,10 @@ object DataModule1: TDataModule1
     object FDTable_TreinosTEMPO_VOLTAS: TLargeintField
       FieldName = 'TEMPO_VOLTAS'
       Origin = 'TEMPO_VOLTAS'
+    end
+    object FDTable_TreinosDATA_CADASTRO: TDateField
+      FieldName = 'DATA_CADASTRO'
+      Origin = 'DATA_CADASTRO'
     end
   end
   object FDConnection_SQLite_DB: TFDConnection
@@ -184,7 +182,7 @@ object DataModule1: TDataModule1
       '('
       ' ID INTEGER,'
       ' ID_PILOTO INTEGER,'
-      ' DATA_CADASTRO VARCHAR(8),'
+      ' DATA_CADASTRO VARCHAR(10),'
       ' NUMERO_CARRO INTEGER,'
       ' QTD_VOLTAS INTEGER,'
       ' TEMPO_VOLTAS VARCHAR(10),'

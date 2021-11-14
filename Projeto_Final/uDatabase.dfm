@@ -84,7 +84,7 @@ object DataModule1: TDataModule1
     Active = True
     IndexFieldNames = 'ID'
     Connection = FDConnection_SQLite_DB
-    TableName = 'TREINOS'
+    TableName = 'TREINOS3'
     Left = 200
     Top = 256
     object FDTable_TreinosID: TIntegerField
@@ -98,11 +98,12 @@ object DataModule1: TDataModule1
       FieldName = 'ID_PILOTO'
       Origin = 'ID_PILOTO'
     end
-    object FDTable_TreinosDATA_CADASTRO: TDateField
-      DisplayLabel = 'Data de Cadastro'
+    object FDTable_TreinosDATA_CADASTRO: TStringField
+      DisplayLabel = 'Data do Cadastro'
       FieldName = 'DATA_CADASTRO'
       Origin = 'DATA_CADASTRO'
       EditMask = '!99/99/0000;1;_'
+      Size = 10
     end
     object FDTable_TreinosNUMERO_CARRO: TIntegerField
       DisplayLabel = 'N'#250'mero do Carro'
@@ -114,21 +115,23 @@ object DataModule1: TDataModule1
       FieldName = 'QTD_VOLTAS'
       Origin = 'QTD_VOLTAS'
     end
-    object FDTable_TreinosNome_Piloto: TStringField
+    object FDTable_TreinosTEMPO_VOLTAS: TStringField
+      DisplayLabel = 'Tempo das Voltas'
+      FieldName = 'TEMPO_VOLTAS'
+      Origin = 'TEMPO_VOLTAS'
+      EditMask = '!90:00:00;1;_'
+      Size = 10
+    end
+    object FDTable_Treinosnome_piloto: TStringField
       DisplayLabel = 'Nome do Piloto'
-      DisplayWidth = 50
       FieldKind = fkLookup
-      FieldName = 'Nome_Piloto'
+      FieldName = 'nome_piloto'
       LookupDataSet = FDTable_Pilotos
       LookupKeyFields = 'ID'
       LookupResultField = 'NOME'
       KeyFields = 'ID_PILOTO'
       Size = 100
       Lookup = True
-    end
-    object FDTable_TreinosTEMPO_VOLTAS: TLargeintField
-      FieldName = 'TEMPO_VOLTAS'
-      Origin = 'TEMPO_VOLTAS'
     end
   end
   object FDConnection_SQLite_DB: TFDConnection
@@ -180,7 +183,7 @@ object DataModule1: TDataModule1
   object FDQuery_Treinos: TFDQuery
     Connection = FDConnection_SQLite_DB
     SQL.Strings = (
-      'CREATE TABLE IF NOT EXISTS TREINOS'
+      'CREATE TABLE IF NOT EXISTS TREINOS3'
       '('
       ' ID INTEGER,'
       ' ID_PILOTO INTEGER,'

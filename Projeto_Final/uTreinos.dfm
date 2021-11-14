@@ -22,7 +22,6 @@ object frmTreinos: TfrmTreinos
     Align = alTop
     ShowCaption = False
     TabOrder = 0
-    ExplicitWidth = 594
     object Label_cod_treino: TLabel
       Left = 16
       Top = 16
@@ -38,14 +37,6 @@ object frmTreinos: TfrmTreinos
       Height = 13
       Caption = 'C'#243'digo do Piloto'
       FocusControl = DBEdit_cod_piloto
-    end
-    object Label_dt_cadastro: TLabel
-      Left = 16
-      Top = 140
-      Width = 85
-      Height = 13
-      Caption = 'Data de Cadastro'
-      FocusControl = DBEdit_dt_cadastro
     end
     object Label_carro: TLabel
       Left = 19
@@ -63,13 +54,21 @@ object frmTreinos: TfrmTreinos
       Caption = 'Quantidade de Voltas'
       FocusControl = DBEdit_qtd_voltas
     end
-    object Label_tmp_voltas: TLabel
-      Left = 176
+    object Label1: TLabel
+      Left = 16
+      Top = 139
+      Width = 85
+      Height = 13
+      Caption = 'Data do Cadastro'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 168
       Top = 176
       Width = 84
       Height = 13
       Caption = 'Tempo das Voltas'
-      FocusControl = DBEdit_tmp_voltas
+      FocusControl = DBEdit2
     end
     object DBEdit_cod_treino: TDBEdit
       Left = 16
@@ -89,16 +88,6 @@ object frmTreinos: TfrmTreinos
       DataSource = DataSource_Treinos
       TabOrder = 1
     end
-    object DBEdit_dt_cadastro: TDBEdit
-      Left = 16
-      Top = 153
-      Width = 134
-      Height = 21
-      DataField = 'DATA_CADASTRO'
-      DataSource = DataSource_Treinos
-      MaxLength = 10
-      TabOrder = 2
-    end
     object DBEdit_carro: TDBEdit
       Left = 16
       Top = 115
@@ -106,7 +95,7 @@ object frmTreinos: TfrmTreinos
       Height = 21
       DataField = 'NUMERO_CARRO'
       DataSource = DataSource_Treinos
-      TabOrder = 3
+      TabOrder = 2
     end
     object DBEdit_qtd_voltas: TDBEdit
       Left = 16
@@ -115,16 +104,7 @@ object frmTreinos: TfrmTreinos
       Height = 21
       DataField = 'QTD_VOLTAS'
       DataSource = DataSource_Treinos
-      TabOrder = 4
-    end
-    object DBEdit_tmp_voltas: TDBEdit
-      Left = 176
-      Top = 193
-      Width = 199
-      Height = 21
-      DataField = 'TEMPO_VOLTAS'
-      DataSource = DataSource_Treinos
-      TabOrder = 5
+      TabOrder = 3
     end
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 107
@@ -133,6 +113,26 @@ object frmTreinos: TfrmTreinos
       Height = 21
       DataField = 'Nome_Piloto'
       DataSource = DataSource_Treinos
+      TabOrder = 4
+    end
+    object DBEdit1: TDBEdit
+      Left = 16
+      Top = 153
+      Width = 132
+      Height = 21
+      DataField = 'DATA_CADASTRO'
+      DataSource = DataSource_Treinos
+      MaxLength = 10
+      TabOrder = 5
+    end
+    object DBEdit2: TDBEdit
+      Left = 168
+      Top = 193
+      Width = 132
+      Height = 21
+      DataField = 'TEMPO_VOLTAS'
+      DataSource = DataSource_Treinos
+      MaxLength = 8
       TabOrder = 6
     end
   end

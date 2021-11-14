@@ -30,6 +30,16 @@ type
     FDTable_PilotosID_CIDADE: TIntegerField;
     FDTable_PilotosENDERECO: TStringField;
     FDTable_Pilotosnome_cidade: TStringField;
+    FDTable_TreinosID: TIntegerField;
+    FDTable_TreinosID_PILOTO: TIntegerField;
+    FDTable_TreinosNUMERO_CARRO: TIntegerField;
+    FDTable_TreinosQTD_VOLTAS: TIntegerField;
+    FDTable_TreinosNome_Piloto: TStringField;
+    FDTable_TreinosTEMPO_VOLTAS: TLargeintField;
+    FDTable_TreinosDATA_CADASTRO: TDateField;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure FDConnection_SQLite_DBAfterConnect(Sender: TObject);
+    procedure FDConnection_SQLite_DBBeforeConnect(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,5 +54,27 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+  FDConnection_SQLite_DB.Connected := true;
+end;
+
+procedure TDataModule1.FDConnection_SQLite_DBAfterConnect(Sender: TObject);
+begin
+  FDQuery_Cidades.ExecSQL;
+  FDTable_Cidades.Active := true;
+
+  FDQuery_Pilotos.ExecSQL;
+  FDTable_Pilotos.Active := True;
+
+  FDQuery_Treinos.ExecSQL;
+  FDTable_Treinos.Active := true;
+end;
+
+procedure TDataModule1.FDConnection_SQLite_DBBeforeConnect(Sender: TObject);
+begin
+  FDConnection_SQLite_DB.Params.Database := ExtractFilePath(ParamStr(0)) + 'dados.sdb';
+end;
 
 end.
