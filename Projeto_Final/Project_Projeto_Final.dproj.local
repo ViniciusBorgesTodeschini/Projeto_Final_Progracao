@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/12 20:48:47.000.843,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/13 08:29:44.000.173,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/14 10:56:11.000.786,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/14 10:56:56.000.728,C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uPrincipal.pas=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/14 10:56:56.000.728,C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uPrincipal.dfm=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/11/14 10:57:03.000.368,C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\Project_Projeto_Final.dproj=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/11/14 12:15:22.000.740,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uCidades.pas</Transaction>
+    <Transaction>2021/11/14 12:15:33.000.846,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uPilotos.pas</Transaction>
+    <Transaction>2021/11/14 12:15:37.000.643,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uTreinos.pas</Transaction>
+    <Transaction>2021/11/14 12:15:44.000.121,=C:\Users\vini_\Documents\Embarcadero\Studio\Projects\Projeto_Final\uDatabase.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="uCidades.pas"/>
+    <File Path="uCidades.dfm"/>
+    <File Path="uDatabase.pas"/>
+    <File Path="uDatabase.dfm"/>
+    <File Path="uPilotos.pas"/>
+    <File Path="uPilotos.dfm"/>
+    <File Path="uPrincipal.pas"/>
+    <File Path="uPrincipal.dfm"/>
+    <File Path="uTreinos.pas"/>
+    <File Path="uTreinos.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

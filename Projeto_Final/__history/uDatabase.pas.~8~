@@ -1,0 +1,47 @@
+unit uDatabase;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.UI.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Phys, FireDAC.Phys.SQLite,
+  FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.VCLUI.Wait,
+  FireDAC.Phys.SQLiteWrapper.Stat, Data.DB, FireDAC.Comp.Client,
+  FireDAC.Comp.DataSet;
+
+type
+  TDataModule1 = class(TDataModule)
+    FDTable_Cidades: TFDTable;
+    FDTable_Pilotos: TFDTable;
+    FDTable_Treinos: TFDTable;
+    FDConnection_SQLite_DB: TFDConnection;
+    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
+    FDQuery_Cidades: TFDQuery;
+    FDQuery_Pilotos: TFDQuery;
+    FDQuery_Treinos: TFDQuery;
+    FDTable_CidadesID: TIntegerField;
+    FDTable_CidadesNOME: TStringField;
+    FDTable_CidadesSIGLA: TStringField;
+    FDTable_PilotosID: TIntegerField;
+    FDTable_PilotosNOME: TStringField;
+    FDTable_PilotosTELEFONE: TStringField;
+    FDTable_PilotosID_CIDADE: TIntegerField;
+    FDTable_PilotosENDERECO: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
